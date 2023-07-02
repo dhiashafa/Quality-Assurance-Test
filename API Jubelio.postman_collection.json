@@ -1,0 +1,616 @@
+{
+	"info": {
+		"_postman_id": "3140603a-ba95-48e3-bd0c-391464a92817",
+		"name": "API Jubelio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14209571"
+	},
+	"item": [
+		{
+			"name": "All Product Prices (Successfull)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlVTRVI6cWEucmFrYW1pbi5qdWJlbGlvQGdtYWlsLmNvbToxODAuMjUyLjE2NS4yOCIsImV4cCI6MTY4ODMwMTcxMjQ5OCwiaWF0IjoxNjg4MjU4NTEyfQ.vkeomItvBZ5-Bk-wXMUu7Hq2J8ZRAX3cxygMXJwwgpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/internal-price-list/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"internal-price-list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Product Prices (Internal Server Error)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlVTRVI6cWEucmFrYW1pbi5qdWJlbGlvQGdtYWlsLmNvbToxODAuMjUyLjE2NS4yOCIsImV4cCI6MTY4ODMwMTcxMjQ5OCwiaWF0IjoxNjg4MjU4NTEyfQ.vkeomItvBZ5-Bk-wXMUu7Hq2J8ZRAX3cxygMXJwwgpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/internal-price-list/?page=14&pageSize=13&sortDirection=sortDirection=ASC&sortBy=sortBy=name&q",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"internal-price-list",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "14"
+						},
+						{
+							"key": "pageSize",
+							"value": "13"
+						},
+						{
+							"key": "sortDirection",
+							"value": "sortDirection=ASC"
+						},
+						{
+							"key": "sortBy",
+							"value": "sortBy=name"
+						},
+						{
+							"key": "q",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Product Prices (Missing authentication)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/internal-price-list/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"internal-price-list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product (Successfull)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlVTRVI6cWEucmFrYW1pbi5qdWJlbGlvQGdtYWlsLmNvbToxODAuMjUyLjE2NS4yOCIsImV4cCI6MTY4ODMwMTcxMjQ5OCwiaWF0IjoxNjg4MjU4NTEyfQ.vkeomItvBZ5-Bk-wXMUu7Hq2J8ZRAX3cxygMXJwwgpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ids\": [\r\n    12\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/items/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product (Missing authentication)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ids\": [\r\n    12\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/items/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product without entering id product (Internal Server Error)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlVTRVI6cWEucmFrYW1pbi5qdWJlbGlvQGdtYWlsLmNvbToxODAuMjUyLjE2NS4yOCIsImV4cCI6MTY4ODMwMTcxMjQ5OCwiaWF0IjoxNjg4MjU4NTEyfQ.vkeomItvBZ5-Bk-wXMUu7Hq2J8ZRAX3cxygMXJwwgpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ids\": [\r\n    \r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/items/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login with a valid email and password (Successful)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"qa.rakamin.jubelio@gmail.com\",\r\n  \"password\": \"Jubelio123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login by entering an incorrect password (Internal Server Error)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"qa.rakamin.jubelio@gmail.com\",\r\n  \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login by entering an incorrect email (Internal Server Error)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"Jubelio123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login without entering an email (Bad Request)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"Jubelio123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login without entering an password (Bad Request)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"qa.rakamin.jubelio@gmail.com\",\r\n  \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/login",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Product Image (Succesfull)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlVTRVI6cWEucmFrYW1pbi5qdWJlbGlvQGdtYWlsLmNvbToxODAuMjUyLjE2NS4yOCIsImV4cCI6MTY4ODMwMTcxMjQ5OCwiaWF0IjoxNjg4MjU4NTEyfQ.vkeomItvBZ5-Bk-wXMUu7Hq2J8ZRAX3cxygMXJwwgpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/User/Pictures/GNB215SQMT1_011220201214_ll.jpg.jpg"
+						},
+						{
+							"key": "name",
+							"value": "Kulkas LG",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/upload-image",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Product image without entering product Image (Internal Server Error)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlVTRVI6cWEucmFrYW1pbi5qdWJlbGlvQGdtYWlsLmNvbToxODAuMjUyLjE2NS4yOCIsImV4cCI6MTY4ODMwMTcxMjQ5OCwiaWF0IjoxNjg4MjU4NTEyfQ.vkeomItvBZ5-Bk-wXMUu7Hq2J8ZRAX3cxygMXJwwgpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "name",
+							"value": "Kulkas Aqua",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/upload-image",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"upload-image"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Product image without entering product name (Internal Server Error) Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlVTRVI6cWEucmFrYW1pbi5qdWJlbGlvQGdtYWlsLmNvbToxODAuMjUyLjE2NS4yOCIsImV4cCI6MTY4ODMwMTcxMjQ5OCwiaWF0IjoxNjg4MjU4NTEyfQ.vkeomItvBZ5-Bk-wXMUu7Hq2J8ZRAX3cxygMXJwwgpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/User/Pictures/Fridge-PNG-Photo.png"
+						},
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/upload-image",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"upload-image"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Product (Missing authentication)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/User/Pictures/GNB215SQMT1_011220201214_ll.jpg.jpg"
+						},
+						{
+							"key": "name",
+							"value": "Kulkas LG",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.jubelio.com/inventory/upload-image",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jubelio",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
